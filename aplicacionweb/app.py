@@ -14,7 +14,7 @@ def login():
 def inicio():
     usuario=request.form.get("usuario")
     contrasena=request.form.get("contraseña")
-    maquina1='192.168.1.133'
+    maquina1='dirección_IP'
     nombredb1='medico'
     conex= pymysql.connect(host=maquina1,user=usuario,password=contrasena,database=nombredb1)
     datos=Mostrar_citas(conex)
